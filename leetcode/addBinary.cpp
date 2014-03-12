@@ -24,7 +24,7 @@ string addBinary(string a, string b) {
                 bVal = 0;
             }
             int sum = aVal + bVal + (carry ? 1 : 0);
-            carry = (sum==2)?true:false;
+            carry = (sum>=2)?true:false;
             nxt = (sum%2)?'1':'0';
             result.insert(0, 1 ,nxt);
         }

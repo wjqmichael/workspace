@@ -1,15 +1,15 @@
 import sys
 
 class Node(object):
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, val):
+        self.val = val
         self.next = None
     def __repr__(self):
-        return str(self.data)
+        return str(self.val)
 
 def node_to_iter(node):
     while not node is None:
-        yield str(node)
+        yield node.val
         node = node.next
 
 def iter_to_node(iter):
